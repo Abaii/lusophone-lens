@@ -1,0 +1,86 @@
+ ERROR 
+
+Error in "/Users/danny/Documents/lusophone-lens/node_modules/gatsby-plugin-page-creator/gatsby-node.js": Cannot find module 'gatsby-cli/lib/reporter'
+Require stack:
+- /Users/danny/Documents/lusophone-lens/node_modules/gatsby-plugin-page-creator/is-valid-collection-path-implementation.js
+- /Users/danny/Documents/lusophone-lens/node_modules/gatsby-plugin-page-creator/create-pages-from-collection-builder.js
+- /Users/danny/Documents/lusophone-lens/node_modules/gatsby-plugin-page-creator/create-page-wrapper.js
+- /Users/danny/Documents/lusophone-lens/node_modules/gatsby-plugin-page-creator/gatsby-node.js
+- /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/bootstrap/resolve-module-exports.js
+- /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/bootstrap/load-plugins/validate.js
+- /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/bootstrap/load-plugins/load.js
+- /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/bootstrap/load-plugins/index.js
+- /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/services/initialize.js
+- /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/services/index.js
+- /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/state-machines/develop/services.js
+- /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/state-machines/develop/index.js
+- /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/commands/develop-process.js
+- /Users/danny/Documents/lusophone-lens/.cache/tmp-34478-JSBkjjFeUsc3
+
+
+
+  Error: Cannot find module 'gatsby-cli/lib/reporter'
+  Require stack:
+  - /Users/danny/Documents/lusophone-lens/node_modules/gatsby-plugin-page-creator/is-valid-collection-path-implementation.js
+  - /Users/danny/Documents/lusophone-lens/node_modules/gatsby-plugin-page-creator/create-pages-from-collection-builder.js
+  - /Users/danny/Documents/lusophone-lens/node_modules/gatsby-plugin-page-creator/create-page-wrapper.js
+  - /Users/danny/Documents/lusophone-lens/node_modules/gatsby-plugin-page-creator/gatsby-node.js
+  - /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/bootstrap/resolve-module-exports.js
+  - /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/bootstrap/load-plugins/validate.js
+  - /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/bootstrap/load-plugins/load.js
+  - /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/bootstrap/load-plugins/index.js
+  - /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/services/initialize.js
+  - /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/services/index.js
+  - /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/state-machines/develop/services.js
+  - /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/state-machines/develop/index.js
+  - /Users/danny/Documents/lusophone-lens/node_modules/gatsby/dist/commands/develop-process.js
+  - /Users/danny/Documents/lusophone-lens/.cache/tmp-34478-JSBkjjFeUsc3
+  
+  - loader.js:1029 Function.Module._resolveFilename
+    internal/modules/cjs/loader.js:1029:15
+  
+  - loader.js:898 Function.Module._load
+    internal/modules/cjs/loader.js:898:27
+  
+  - loader.js:1089 Module.require
+    internal/modules/cjs/loader.js:1089:19
+  
+  - v8-compile-cache.js:159 require
+    [lusophone-lens]/[v8-compile-cache]/v8-compile-cache.js:159:20
+  
+  - is-valid-collection-path-implementation.js:10 Object.<anonymous>
+    [lusophone-lens]/[gatsby-plugin-page-creator]/is-valid-collection-path-implementation.js:10:40
+  
+  - v8-compile-cache.js:178 Module._compile
+    [lusophone-lens]/[v8-compile-cache]/v8-compile-cache.js:178:30
+  
+  - loader.js:1220 Object.Module._extensions..js
+    internal/modules/cjs/loader.js:1220:10
+  
+  - loader.js:1049 Module.load
+    internal/modules/cjs/loader.js:1049:32
+  
+  - loader.js:937 Function.Module._load
+    internal/modules/cjs/loader.js:937:14
+  
+  - loader.js:1089 Module.require
+    internal/modules/cjs/loader.js:1089:19
+  
+  - v8-compile-cache.js:159 require
+    [lusophone-lens]/[v8-compile-cache]/v8-compile-cache.js:159:20
+  
+  - create-pages-from-collection-builder.js:28 Object.<anonymous>
+    [lusophone-lens]/[gatsby-plugin-page-creator]/create-pages-from-collection-builder.js:28:44
+  
+  - v8-compile-cache.js:178 Module._compile
+    [lusophone-lens]/[v8-compile-cache]/v8-compile-cache.js:178:30
+  
+  - loader.js:1220 Object.Module._extensions..js
+    internal/modules/cjs/loader.js:1220:10
+  
+  - loader.js:1049 Module.load
+    internal/modules/cjs/loader.js:1049:32
+  
+  - loader.js:937 Function.Module._load
+    internal/modules/cjs/loader.js:937:14
+  
