@@ -33,12 +33,13 @@ const Logo = styled.h2`
     height: 75px;
     color: black;
     margin: 15px;
-    font-size: 45xpx;
+    font-size: 45px;
 `;
 
 const ImageWrapper = styled.div`
     padding-right: 240px;
     margin-left: -20px;
+   
 `
 
 export const query = graphql`
@@ -52,6 +53,25 @@ export const query = graphql`
     }
   }
 `;
+
+const SubTitle = styled.h2`
+ color: black;
+ font-size: 93px;
+ margin-top: -70px;
+ position: absolute;
+ width:500px;
+ right: 500px;
+`
+const VertNavWrapper = styled.div`
+ border: 1px solid black;
+ display: flex;
+ flex-direction: column;
+
+`
+const VertNav = styled.h2`
+ font-size: 47px;
+ color: black;
+`
 
 const Homepage = () => {
     const data = useStaticQuery(query);
@@ -74,7 +94,24 @@ const Homepage = () => {
                 <Img 
                     fluid={data.fileName.childImageSharp.fluid} 
                 />
+                <SubTitle>
+                Bemvindo Caralho, Fodasse
+                </SubTitle>
             </ImageWrapper>
+            <VertNavWrapper>
+                <VertNav>
+                    Três
+                </VertNav>
+                <VertNav>
+                    Imperials
+                </VertNav>
+                <VertNav>
+                    Brigado
+                </VertNav>
+                <VertNav>
+                    Fodasse
+                </VertNav>
+            </VertNavWrapper>
         </>
     )
      
