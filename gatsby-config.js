@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Lusophone lens`,
+    description: `A political risk analysis company`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -31,7 +31,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Inter`,
+          `Montserrat`,
           `source sans pro\:100,200,300,400,500,600,700,800,900`, // you can also specify font weights and styles
         ],
         display: "swap",
@@ -42,15 +42,6 @@ module.exports = {
       options: {
         rule: {
           include: /assets/,
-        },
-      },
-    },
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        custom: {
-          families: ["Shapiro Light, Shapiro air, Shapiro Feather"],
-          urls: ["/fonts/fonts.css"],
         },
       },
     },

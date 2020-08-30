@@ -8,9 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
 import "./layout.css"
+import Navbar from "./Navbar";
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,13 +28,16 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-          padding: `0 1.0875rem 1.45rem`,
+          padding: `0 60px`,
+          
           // background: " rgb(255,202,212)",
           // background:
           //   "linear-gradient(90deg, rgba(255,202,212,1) 0%, rgba(255,255,255,1) 84%)",
         }}
       >
+        <Navbar/>
         <main>{children}</main>
+        <Footer/>
       </div>
     </>
   )
