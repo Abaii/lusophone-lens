@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled, { css } from "styled-components"
 const ImageWrapper = styled.div`
   width: 140px;
