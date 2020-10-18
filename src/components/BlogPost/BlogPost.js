@@ -175,7 +175,7 @@ const BlogPost = () => {
           </ImageSection>
           <Article>
               <ReactMarkdown source={data.content} 
-                transformImageUri={uri => uri.startsWith('http') ? uri : 
+                transformImageUri={uri => uri.startsWith('https') ? uri : 
                 `${process.env.IMAGE_BASE_URL}${uri}` }
               />
           </Article>
