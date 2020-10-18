@@ -34,7 +34,6 @@ const Navbar = () => {
         <Logo />
         <LinksWrapper>
           <Links active={true}>Home</Links>
-          <Links><Link to="/analysis">Analysis</Link></Links>
           <Links>About</Links>
         </LinksWrapper>
       </Container>

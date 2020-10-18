@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useQuery } from 'gatsby';
 import Img from "gatsby-image";
 import ReactMarkdown from 'react-markdown';
 
@@ -76,27 +76,6 @@ const Text = styled.span`
     margin-bottom: 30px;
 `;
 
-export const query = graphql`
-   query IndexQuery {
-    allStrapiArticle {
-      edges {
-        node {
-          id
-          cover {
-            childImageSharp {
-              fixed(width: 200, height: 125) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-          title
-          description
-          content
-        }
-      }
-    }
-  }
-`;
 
 const ImageContainer = styled.div`
     display: flex; 
@@ -138,10 +117,8 @@ const ImageAndCaption = styled.div`
 `;
 
 
-const BlogPost = () => {
-    const { allStrapiArticle: { edges }} = useStaticQuery(query);
-    const data = edges[0].node
-    console.log(edges[0].node)
+const BlogPost = ({ data: { strapiArticle } }) => {
+    
     return (
       <>
         <BlogWrapper>
@@ -151,16 +128,16 @@ const BlogPost = () => {
               <div>
                 <Date>4 min read.</Date>
               </div>
-              <Title>{data.title}</Title>
+              <Title>{strapiArticle.title}</Title>
               <Description>
-                {data.description}
+                {strapiArticle.description}
               </Description>
               <Date>Written by Ben Simonson</Date>
               <hr />
             </div>
           </Section>
           <ImageSection>
-          
+            <Img fluid={strapiArticle.cover.childImageSharp.fluid} />
             <div style={{ paddingTop: 0, marginTop: "-27px" }}>
               <ListWrapper>
                 <SummaryTitle>In brief:</SummaryTitle>
@@ -174,7 +151,7 @@ const BlogPost = () => {
             </div>
           </ImageSection>
           <Article>
-              <ReactMarkdown source={data.content} 
+              <ReactMarkdown source={strapiArticle.content} 
                 transformImageUri={uri => uri.startsWith('https') ? uri : 
                 `${process.env.IMAGE_BASE_URL}${uri}` }
               />

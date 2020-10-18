@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import "./layout.css"
 import Navbar from "./Navbar";
 import Footer from './Footer';
@@ -23,9 +22,6 @@ const Layout = ({ children }) => {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          // background: " rgb(255,202,212)",
-          // background:
-          //   "linear-gradient(90deg, rgba(255,202,212,1) 0%, rgba(255,255,255,1) 84%)",
         }}
       >
         <Navbar/>

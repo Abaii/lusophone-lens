@@ -39,13 +39,13 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.allStrapiArticle.edges.forEach(({ node }) => {
       createPage({
-        path: `/article/${node.url}`,
-        component: path.resolve(`src/pages/analysis.js`),
+        path: `/${node.url}`,
+        component: path.resolve(`src/components/analysis.js`),
         context: {
           id: node.id,
         },
       })
     });
  });
-   return getArticles;
+return getArticles;
 };
