@@ -32,10 +32,11 @@ const Intro = () => {
       <IntroTitle>Lusophone lens</IntroTitle>
       <IntroSubTitle>Political Risk Analysis</IntroSubTitle>
       <IntroText>
-        Lusophone lens is an independent political risk advisory project
-        focusing on the Portuguese-speaking world. Our area of research focuses
-        primarily on the political, economic and environmental affairs of
-        Portugal, Brazil, Angola, Mozambique and Macau.
+        Lusophone lens is an independent political risk advisory project focusing on the Portuguese-speaking world.
+        
+We focus on the intersection of the political, economic, social and environmental and aim to deliver timely and accurate insights that go beyond the obvious. 
+<br/><br/>
+Our mission is to help others exploit opportunities and navigate risks within the Lusophone world. Our main regions of interest include Portugal, Brazil, Angola, Mozambique and Macau
       </IntroText>
     </IntroWrapper>
   )

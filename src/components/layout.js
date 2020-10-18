@@ -13,15 +13,6 @@ import Navbar from "./Navbar";
 import Footer from './Footer';
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
 
   return (
     <>
@@ -29,14 +20,16 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
           padding: `0 60px`,
-          
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
           // background: " rgb(255,202,212)",
           // background:
           //   "linear-gradient(90deg, rgba(255,202,212,1) 0%, rgba(255,255,255,1) 84%)",
         }}
       >
         <Navbar/>
-        <main>{children}</main>
+        <main style={{flex: '1'}}>{children}</main>
         <Footer/>
       </div>
     </>

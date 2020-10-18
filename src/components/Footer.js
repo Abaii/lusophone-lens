@@ -5,7 +5,6 @@ const FooterContainer = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 40px 0px;
-
 `;
 
 const LinksWrapper = styled.div`

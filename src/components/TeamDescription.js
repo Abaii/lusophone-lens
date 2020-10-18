@@ -29,8 +29,6 @@ const MainWrapper = styled.div`
 
 const TeamMemberContainer = styled.div`
     display: flex;
-    
-    
 `;
 const MemberName = styled.h6`
     font-size: 20px;
@@ -49,7 +47,6 @@ const TeamDescription = () => {
           <Title>Who makes the magic happen.</Title>
           <Subtitle>
             A team of future moguls assembled in 2020 to create Lusophone-lens.
-            
           </Subtitle>
         </MainWrapper>
         <TeamMemberContainer>
@@ -61,11 +58,6 @@ const TeamDescription = () => {
           <TeamMemberWrapper>
             <MemberName>Abai Edmund</MemberName>
             <Subtitle>Software Developer, CEO.</Subtitle>
-            <LightSubtitle>February 2020 - present</LightSubtitle>
-          </TeamMemberWrapper>
-          <TeamMemberWrapper>
-            <MemberName>Danny Isaksen</MemberName>
-            <Subtitle>CTO, Mogul</Subtitle>
             <LightSubtitle>February 2020 - present</LightSubtitle>
           </TeamMemberWrapper>
         </TeamMemberContainer>
