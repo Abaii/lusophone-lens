@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "./layout"
-import BlogPost from "./BlogPost/BlogPost";
+import Layout from "../components/layout"
+import BlogPost from "../components/BlogPost/BlogPost";
 import { graphql } from 'gatsby';
 
 const Analysis = ({ data }) => {

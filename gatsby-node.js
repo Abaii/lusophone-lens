@@ -40,7 +40,7 @@ exports.createPages = ({ actions, graphql }) => {
     result.data.allStrapiArticle.edges.forEach(({ node }) => {
       createPage({
         path: `/${node.url}`,
-        component: path.resolve(`src/components/analysis.js`),
+        component: path.resolve(`src/templates/analysis.js`),
         context: {
           id: node.id,
         },
