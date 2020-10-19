@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "./layout"
 import BlogPost from "./BlogPost/BlogPost";
+import { graphql } from 'gatsby';
 
 const Analysis = ({ data }) => {
   console.log(data);
@@ -20,12 +21,12 @@ export const query = graphql`
       description
       content
       cover {
-          childImageSharp {
-            fluid(maxWidth: 1000, maxHeight: 1000) {
-              ...GatsbyImageSharpFluid
-            }
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 1000) {
+            ...GatsbyImageSharpFluid
           }
         }
+      }
       url
     }
   }

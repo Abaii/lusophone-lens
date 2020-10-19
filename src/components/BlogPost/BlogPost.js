@@ -118,7 +118,7 @@ const ImageAndCaption = styled.div`
 
 
 const BlogPost = ({ data: { strapiArticle } }) => {
-    
+  
     return (
       <>
         <BlogWrapper>
