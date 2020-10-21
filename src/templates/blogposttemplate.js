@@ -3,17 +3,17 @@ import Layout from "../components/layout"
 import BlogPost from "../components/BlogPost/BlogPost";
 import { graphql } from 'gatsby';
 
-const Analysis = ({ data }) => {
-  console.log(data);
+const BlogPostTemplate = ({ data }) => {
   return (
-  <Layout>
-    <BlogPost data={data}/>
-  </Layout>
-)
+    <Layout>
+      <BlogPost data={data}/>
+    </Layout>
+  )
 }
 
 
-export default Analysis;
+export default BlogPostTemplate;
+
 export const query = graphql`
   query ArticleTemplate($id: String!) {
     strapiArticle(id: {eq: $id}) {
@@ -30,4 +30,4 @@ export const query = graphql`
       url
     }
   }
-`
+`;

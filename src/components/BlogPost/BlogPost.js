@@ -9,11 +9,7 @@ const Title = styled.h1`
   font-size: 38px;
   color: black;
 `;
-const Description = styled.p`
-    font-weight: 200;
-    opacity: 0.7;
-    line-height: 1.4;
-`;
+
 
 const BlogWrapper = styled.div`
     display: flex; 
@@ -50,7 +46,10 @@ const Article = styled.section`
     display: flex;
     flex-direction: column;
     margin-top: 100px;
-    padding: 50px 350px;
+    @media (min-width: 968px) {
+      padding: 50px 350px;
+
+    }
     div {
         display: flex;
         flex-direction: column;
@@ -94,10 +93,26 @@ const SummaryTitle = styled.h3`
 const ImageSection = styled.section`
     display: flex;
     width: 100%;
-    div {
-        width: 50%;
+    div{ 
+      width: 50%;
+    }
+    div:last-child {
+        margin-top: 30px;
         padding: 20px;
     };
+    
+    @media (max-width: 968px) {
+      flex-direction:column;
+      div {
+        width: 100%;
+      }
+      div:last-child {
+        width: 100%;
+        margin-top: 50px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
 
 `;
 
@@ -108,14 +123,16 @@ const ListWrapper = styled.div`
 `;  
 
 const ImageAndCaption = styled.div`
-  text-align: center;
-
-  span {
-    opacity: 0.6;
-    font-size: 16px;
-  }
+  background: url(${({ url }) => url && url});
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 `;
 
+const renderers = {
+  image: (({ src }) =>  <ImageAndCaption url={src} /> )
+}
 
 const BlogPost = ({ data: { strapiArticle } }) => {
   
@@ -123,15 +140,13 @@ const BlogPost = ({ data: { strapiArticle } }) => {
       <>
         <BlogWrapper>
           <Section>
-            <div style={{ paddingRight: "50%" }}>
+            <div>
               <Date>Published: 16th August 2020.</Date>
               <div>
                 <Date>4 min read.</Date>
               </div>
               <Title>{strapiArticle.title}</Title>
-              <Description>
-                {strapiArticle.description}
-              </Description>
+              
               <Date>Written by Ben Simonson</Date>
               <hr />
             </div>
@@ -154,6 +169,7 @@ const BlogPost = ({ data: { strapiArticle } }) => {
               <ReactMarkdown source={strapiArticle.content} 
                 transformImageUri={uri => uri.startsWith('https') ? uri : 
                 `${process.env.IMAGE_BASE_URL}${uri}` }
+                renderers={renderers}
               />
           </Article>
         </BlogWrapper>

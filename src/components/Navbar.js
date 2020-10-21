@@ -13,18 +13,23 @@ const Container = styled.div`
 const LinksWrapper = styled.div`
     display: flex;
     align-items: center;
+    a {
+      color: inherit;
+    }
 `
 
-const Links = styled.span`
+const Links = styled(Link)`
   padding: 0 20px;
   text-transform: uppercase;
-  font-weight: ${({ active }) => (active ? "600" : "500")};
   font-size: 12px;
-  transition: all 0.2s ease-in;
-
+  transition: all 0.1s ease-in;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
   &:hover {
-    color: #2f79da;
-    background-color: pink;
+    font-weight: bold;
   }
 `
 
@@ -33,8 +38,8 @@ const Navbar = () => {
       <Container>
         <Logo />
         <LinksWrapper>
-          <Links active={true}>Home</Links>
-          <Links>About</Links>
+          <Links active={true} to='/'>Home</Links>
+          <Links>Analysis</Links>
         </LinksWrapper>
       </Container>
     )

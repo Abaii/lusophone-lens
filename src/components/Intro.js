@@ -7,12 +7,6 @@ const IntroWrapper = styled.div`
   margin: 50px 15% 100px 15%;
 `;
 
-const IntroTitle = styled.h1`
-  font-weight: 400;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 54px;
-`
 const IntroSubTitle = styled.h3`
   opacity: 0.6;
   font-weight: 400;
@@ -29,7 +23,6 @@ const IntroText = styled.h2`
 const Intro = () => {
   return (
     <IntroWrapper>
-      <IntroTitle>Lusophone lens</IntroTitle>
       <IntroSubTitle>Political Risk Analysis</IntroSubTitle>
       <IntroText>
         Lusophone lens is an independent political risk advisory project focusing on the Portuguese-speaking world.

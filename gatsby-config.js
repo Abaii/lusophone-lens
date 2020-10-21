@@ -49,7 +49,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: 'https://enigmatic-sands-94540.herokuapp.com',
+        apiURL: `${process.env.NODE_ENV === 'production' ? 'https://enigmatic-sands-94540.herokuapp.com': 'http://localhost:1337'}`,
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           'article',
         ],
