@@ -73,7 +73,7 @@ const SingleArticle = ({ title, description, url }) => {
   )
 }
 const Pages = () => {
-    const [data, setData] = useState([1,2,3]);
+    const [data, setData] = useState(null);
     useEffect(() => {
         axios.get(`${process.env.STRAPI_URL}/articles`).then((response) => {
           setData(response.data);
@@ -83,12 +83,16 @@ const Pages = () => {
         <Layout>
             <Title>Analysis</Title>
             <Container>
-              {console.log(data)}
-               {data && data.map((article) => <SingleArticle 
+              
+               {data && data.map((article) => {
+                 return (
+                   <SingleArticle 
                 title={article.title}
                 description={article.description}
                 url={article.cover.formats.small.url}
-               />)}
+               />
+                 )
+               })}
             </Container>
         </Layout>
     )
