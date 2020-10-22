@@ -87,7 +87,7 @@ const Pages = () => {
                {data && data.map((article) => <SingleArticle 
                 title={article.title}
                 description={article.description}
-                url={article.cover.small.url}
+                url={article.cover.formats.small.url}
                />)}
             </Container>
         </Layout>
