@@ -9,7 +9,7 @@
   "author": "Abai Edmund",
   "dependencies": {
     "@babel/core": "^7.12.3",
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.80",
     "gatsby-cli": "^2.12.87",
